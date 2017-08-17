@@ -5,4 +5,4 @@ I added simulated annealing as an option, as well as a few other settings.
 Here's an example with 180 polys: 
 ![result](/images/Result.png)
 
-[html preview](http://htmlpreview.github.io/?https://github.com/AtActionPark/hill_climbing_image/blob/master/index.html)
+[Live demo](http://atactionpark.github.io/ImageEvolve/)
