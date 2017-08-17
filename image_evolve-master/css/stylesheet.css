@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*{
+  box-sizing :border-box;
+}
+
+h3{
+  font-weight: 700;
+  padding-bottom:5px;
+}
+
+span {
+  display:block;
+}
+
+canvas{
+  border: 1px solid black;
+  float:left;
+  margin-left:10px;
+  margin-top:10px;
+}
+
+footer{
+  padding-top:100px;
+  clear:both;
+  width:200px;
+  margin:0 auto;
+}
+
+.right{
+  float:right;
+}
+
+.canvasBaseline{
+  clear:both;
+}
+
+.baseline{
+  
+  position:absolute;
+  top:-1000px;
+}
+
+
+/* SETTINGS */
+.controls{
+  float:left;
+  width:100%;
+  padding: 10px 10px;
+  content:"";
+  clear:both;
+  overflow: auto;
+}
+
+.imageContainer, .controlsContainer, .infoContainer{
+  float:left;
+  width:32%;
+  height:130px;  
+  padding: 0px 10px;
+  margin-top:5px;
+  margin-right:5px;
+  min-width:270px;
+  border-radius:10px;
+  background-color: #f1f1f1;
+}
+
+.buttons{
+  margin:0 auto;
+  width:100%;
+}
+
+.subtitle{
+  width:100px;
+  margin-top:5px;
+  margin-bottom:2px;
+}
+
+.polyNbChange{
+  width:50px;
+}
+
+.fitness{
+  display:block;
+}
+
+.numbox{
+  position:absolute;
+  width:45px;
+  right:10px;
+}
+
+/* ADVANCED SETTINGS */
+.randAngles{
+  margin-top:5px;
+}
+
+.step{
+  margin-left:5px;
+}
+
+.optionalAnnealing{
+  display:none;
+}
+
+.checkRight{
+  position:absolute;
+  right:10px;
+  margin-top:4px;
+}
+
+
+/* ADVANCED SETTINGS PANEL */
+#output{
+  display:block;
+  margin-bottom:5px;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition:  left 0.4s ease-in-out;
+  -moz-transition:  left 0.4s ease-in-out;
+  -ms-transition:  left 0.4s ease-in-out;
+  -o-transition:  left 0.4s ease-in-out;
+  transition:  left 0.4s ease-in-out;
+}
+ 
+.container.open-sidebar {
+  left: 240px;
+}
+ 
+.sidebar {
+  position: absolute;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 5px 10px;
+  margin-top:15px;
+  background-color: #f1f1f1;
+}
+
+.sidebar ul li {
+  margin-top:5px;
+}
+
+.sidebar-toggle{
+  margin-top:5px;
+  display:block;
+}
+
+/* BROWSER ALERT */
+.alert{
+  display:none;
+  width:500px;
+  height:20px;
+  color:white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5px;
+  background-color:#ff6666;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
+
+
+ 

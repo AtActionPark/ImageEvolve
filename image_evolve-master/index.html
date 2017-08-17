@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Image Evolve</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script  src="script/utils.js"></script>
+    <script  src="script/DNA.js"></script>
+    <script  src="script/polygon.js"></script>
+    <script  src="script/population.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><h3>Advanced Settings</h3></li>
+        <li></br></li>
+        <li></br></li>
+        <li><h3>Polygons Settings</h3></li>
+        <li>  Minimum size : <input type="number" size="30" value="10" class="minSizeChange numbox" step="1"></li>
+        <li>  Min. nb. of vertices : <input type="number" size="30" value="3" class="minVerticesChange numbox" step="1"></li>
+        <li>  Max. nb. of vertice : <input type="number" size="30" value="8" class="maxVerticesChange numbox" step="1"></li>
+        <li>  Randomize angles : <input class="randomAnglesChange checkRight" type="checkBox" checked></input></li>
+        <li>  Max. nb. of mutations : <input type="number" size="30" value="8" class="maxNbOfMutationsChange numbox" step="1"></li>
+        <li></br></li>
+        <li><h3>Simulated Annealing</h3></li>
+        <li>  Use Simulated Annealing : <input class="annealingBox checkRight" type="checkBox"></input></li>
+        <li>  T° decrease per step : <input type="number" size="30" value="0.99" class="alphaChange numbox" step="0.01"></li>
+        <li>  Mutations per T° step : <input type="number" size="30" value="100" class="temperatureStepChange numbox" step="10"></li>
+        <li>  Return to Best pop : <input class="returnToBestChange checkRight" type="checkBox" checked></input></li>
+        <li>  After x steps : <input type="number" size="30" value="500" class="returnToBestChange numbox" step="10"></li>
+        <li></br></li>
+        <li><h3>Increase Polygons count</h3></li>
+        <li>  Allow poly increment : <input class="increasePolyBox checkRight" type="checkBox" checked></input></li>
+        <li>  After x unsuccessful : <input type="number" size="30" value="500" class="increasePolyChange numbox" step="10"></input></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="alert"></div>
+      <div class="controls">
+        <div class="imageContainer">
+          <h3>Image</h3>
+          <input type="file" id="files" name="files[]" multiple/>
+          <output id="output"></output>
+          <div class="settings">
+            <h3>Settings</h3>
+            Polygons Number :
+            <input type="number" size="30" value="20" class="polyNbChange" step="10">
+            <button class="changePolyCount" onClick="changePolyCount()">Reset</button>
+            <button  data-toggle=".container" class="sidebar-toggle">
+        Advanced </button>
+          </div>
+        </div>
+        <div class="controlsContainer">
+          <h3>Controls</h3>
+          <div class="buttons">
+            <button class="start" onClick="startAlgo()">Start</button>
+            <button class="step" onClick="stepAlgo()">Step</button>
+          </div>
+          </br>
+          <span class="subtitle">Mutation type :</span>
+          <div id="mutationType">
+            <input type="radio" name="mutationType" value="Random" checked>Random</input>
+            <input type="radio" name="mutationType" value="Soft">Soft</input>
+            <input type="radio" name="mutationType" value="Medium">Medium</input>
+            <input type="radio" name="mutationType" value="Hard">Hard</input>
+          </div>
+        </div>
+        <div class="infoContainer">
+          <h3>Info</h3>
+          <span class="fitness"></span>
+          <span class="bestFitness"></span>
+          <span class="mutations"></span>
+          <span class="improvements"></span>
+          <span class="Time"></span>
+          <span class="Temperature optionalAnnealing"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+   <footer>See code on <a href="http://github.com/AtActionPark/image_evolve">Github</a></footer>
+    <script type="text/javascript" src="script/main.js"> </script>
+  </body>
+</html>
